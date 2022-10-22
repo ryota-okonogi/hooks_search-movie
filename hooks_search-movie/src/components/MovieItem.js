@@ -1,13 +1,11 @@
 import React from "react";
 
-
 const MovieItem = ({ movie }) => {
 
   return (
     <li>
       <p>{movie.title}</p>
       <div>
-        // 画像無い場合はNoImageと表示（画像用意するの面倒だった）
         {movie.poster_path ? (
           <img
             className={movieImg}
@@ -17,7 +15,7 @@ const MovieItem = ({ movie }) => {
         ) : (
           <p>NoImage</p>
         )}
-
+      </div>
       <p>{movie.overview}</p>
     </li>
   );
