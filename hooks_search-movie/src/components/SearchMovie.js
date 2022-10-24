@@ -10,6 +10,8 @@ import { apikey } from "../lib/entity";
 // const apikey = process.env.REACT_APP_MOVIE_API_KEY;
 */
 
+// const API_KEY = process.env.REACT_APP_MOVIE_API_KEY
+
 const SearchMovie = word => {
   // 先ほどと同じようにMovieListにAPI通信結果をstate保持させていきます。
   const [movieList, setMovieList] = useState([]); // const [使用する変数の名前, 使用する関数の名前] = Reactのメソッド(stateにいれる最初の値)
