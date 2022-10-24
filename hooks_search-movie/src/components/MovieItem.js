@@ -9,7 +9,7 @@ const MovieItem = ({ movie }) => {
         {movie.poster_path ? (
           <img
             className={movieImg}
-            src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt=""
           />
         ) : (
@@ -22,3 +22,7 @@ const MovieItem = ({ movie }) => {
 };
 
 export default MovieItem;
+
+// [MovieItem.js]
+// {movie.poster_path ? ()   // ここから<img>タグへの出力になる
+// => 渡されたデータにposter_pathがあったら、${movie.poster_path}でポスター画像のパスをセットしている。

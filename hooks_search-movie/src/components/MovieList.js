@@ -19,3 +19,7 @@ const MovieList = ({ word }) => { // // オブジェクト { word } を返す
 };
 
 export default MovieList;
+
+// [MovieList.js]
+// {movieList.map(movie => (   // movieListをループして表示している
+
