@@ -18,6 +18,7 @@ const App = () => {
           //値が変わるたびにhandleChangeを動かす
           onChange={handleChange}
         />
+        {process.env.REACT_APP_MOVIE_API_KEY}
         //MovieListにsetSearchWordで保持したsearchWordを渡す
         <MovieList word={searchWord} />
       </div>
