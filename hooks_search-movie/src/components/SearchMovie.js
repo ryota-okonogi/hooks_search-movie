@@ -1,9 +1,14 @@
 //useState と useEffectをreactからimport
 import { useState, useEffect } from "react";
+
+
 //API通信はaxiosを使います
 import axios from "axios";
+import { apikey } from "../lib/entity";
+/*
 //apikeyはそのまま書いちゃダメなのでenvに入れて呼び出します（他にいいやり方あるのかな？）
-const apikey = process.env.REACT_APP_MOVIE_API_KEY;
+// const apikey = process.env.REACT_APP_MOVIE_API_KEY;
+*/
 
 const SearchMovie = word => {
   // 先ほどと同じようにMovieListにAPI通信結果をstate保持させていきます。
