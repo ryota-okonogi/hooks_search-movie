@@ -1,16 +1,8 @@
 //useState と useEffectをreactからimport
 import { useState, useEffect } from "react";
-
-
-//API通信はaxiosを使います
-import axios from "axios";
-import { apikey } from "../lib/entity";
-/*
-//apikeyはそのまま書いちゃダメなのでenvに入れて呼び出します（他にいいやり方あるのかな？）
-// const apikey = process.env.REACT_APP_MOVIE_API_KEY;
-*/
-
-// const API_KEY = process.env.REACT_APP_MOVIE_API_KEY
+import axios from "axios"; //API通信はaxiosを使う
+const apikey = process.env.REACT_APP_MOVIE_API_KEY; // apikeyはそのまま書いちゃダメなのでenvに入れて呼び出す
+// import { apikey } from "../lib/entity"; // 削除
 
 const SearchMovie = word => {
   // 先ほどと同じようにMovieListにAPI通信結果をstate保持させていきます。
@@ -18,7 +10,8 @@ const SearchMovie = word => {
 
   // 映画のリソースを取得する関数
   const fetchMovie = async word => { // async = 非同期関数を定義する関数宣言
-    console.log(apikey);
+    // const apikey = process.env.REACT_APP_MOVIE_API_KEY;
+    // console.log(apikey);
     const response = await axios.get( // await = async function内でPromiseの結果（resolve、reject）が返されるまで待機する（処理を一時停止する）演算子
       `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${word}` // APIソース
       // 持ってきたwordはここのAPI処理に使われる

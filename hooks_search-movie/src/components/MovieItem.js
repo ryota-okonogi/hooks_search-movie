@@ -8,7 +8,7 @@ const MovieItem = ({ movie }) => {
       <div>
         {movie.poster_path ? (
           <img
-            className={movieImg}
+            className="movieImg" // 修正
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt=""
           />
