@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios"; //API通信はaxiosを使う
 const apikey = process.env.REACT_APP_MOVIE_API_KEY; // apikeyはそのまま書いちゃダメなのでenvに入れて呼び出す
+// REACT_APP_MOVIE_API_KEY=87589f711a713faf0b7a09b39293083c
 // import { apikey } from "../lib/entity"; // 削除
 
 const SearchMovie = word => {
@@ -13,7 +14,7 @@ const SearchMovie = word => {
     // const apikey = process.env.REACT_APP_MOVIE_API_KEY;
     // console.log(apikey);
     const response = await axios.get( // await = async function内でPromiseの結果（resolve、reject）が返されるまで待機する（処理を一時停止する）演算子
-      `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${word}` // APIソース
+      `https://api.themoviedb.org/3/search/movie?api_key=87589f711a713faf0b7a09b39293083c &query=${word}` // APIソース
       // 持ってきたwordはここのAPI処理に使われる
     );
     console.log(response);
