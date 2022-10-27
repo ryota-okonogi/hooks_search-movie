@@ -14,11 +14,11 @@ const SearchMovie = word => {
       `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&query=${word}` // APIソース
       // 持ってきたwordはここのAPI処理に使われる
     );
-    console.log(response);
+    console.log(response); // 送ったhttpリクエストで返ってきたresponseを表示
     const data = response.data.results;
-    // console.log(data);
+    console.log(data); // 返ってきたresponsedataを表示
     setMovieList(data);
-    // APIで返る値をmoviesに保持
+     // APIから返ってきたデータをsetMovieListを使ってMovieListにセット
   };
 
   // useEffect(() => {fetchData(data);}, [data]); => // 第二引数に変数を与えると、最初のレンダリング時と変数の値が変更された時のみメソッドが動く。
